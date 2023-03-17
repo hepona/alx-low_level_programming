@@ -1,10 +1,17 @@
-#inlcude <stdio.h>
+#include <stdio.h>
 /**
- * main - all number but with putchar
+ * main - all digit
  * Return: 0
  */
 int main(void)
-{int i;
-	for (i = 0 ; i <10 ; i++)
-	{
-		putchar
+{
+        int i;
+
+        for (i = 0 ; i < 10 ; i++)
+        {
+        putchar(i);
+        }
+        putchar('\n');
+
+        return (0);
+}

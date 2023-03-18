@@ -20,8 +20,11 @@ int main(void)
 					putchar(i);
 					putchar(j);
 					putchar(k);
+					if (i != 55)
+					{
 					putchar(',');
 					putchar(' ');
+					}
 				}
 			}
 		}
@@ -30,4 +33,3 @@ int main(void)
 
 	return (0);
 }
-

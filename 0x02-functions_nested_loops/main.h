@@ -1,13 +1,10 @@
-void _putchar(char a)
-{
-	putchar(a);
-}
+#include <stdio.h>
 void print_alphabet(void)
 {
 	char i;
 	for (i = 'a' ; i <= 'z' ; i++)
 	{
-		_putchar(i);
+		putchar(i);
 	}
-	_putchar('\n');
+	putchar('\n');
 }

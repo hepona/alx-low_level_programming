@@ -1,2 +1,6 @@
-#include <stdio.h>
-#include "_putchar.c"
+#ifndef HEADER_FILE
+#define HEADER_FILE
+
+int _putchar(char c);
+
+#endif

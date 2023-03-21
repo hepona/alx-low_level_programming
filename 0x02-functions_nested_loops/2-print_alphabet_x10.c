@@ -3,7 +3,7 @@
  * main - 10xAll alphabet
  * Return: 0
  */
-int main(void)
+void print_alphabet_x10(void)
 {
 	char i;
 	int c;

@@ -20,7 +20,7 @@ void print_to_98(int n)
 		}
 	}
 	}
-	if (n >= max)
+	else if (n >= max)
 	{
 		printf("%d", n);
 		if (n != max)

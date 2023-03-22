@@ -9,4 +9,14 @@ void times_table(void)
 
 	for (i = 0 ; i < 10 ; i++)
 	{
-		_putchar(i
+		for (j = 0 ; j < 10 ; j++)
+		{
+			printf("%d", i*j);
+			if (j!=9)
+			{
+				_putchar('\n');
+			}
+		}
+			putchar('\n');
+	}
+}

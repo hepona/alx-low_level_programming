@@ -11,8 +11,11 @@ void print_to_98(int n)
 	for (; n <= max ; n++)
 	{
 		printf("%d", n);
+		if (n != max)
+		{
 		_putchar(' ');
 		_putchar(',');
+		}
 	}
 	_putchar('\n');
 }

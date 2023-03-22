@@ -15,20 +15,18 @@ void print_to_98(int n)
 		printf("%d", n);
 		if (n != max)
 		{
-		_putchar(' ');
-		_putchar(',');
+		printf(" ,");
 		}
 	}
 	}
-	else if (n >= max)
+	else
 	{
 		for (; n >= max ; n--)
 		{
 		printf("%d", n);
 		if (n != max)
 		{
-			_putchar(' ');
-			_putchar(',');
+			printf(" ,");
 		}
 		}
 	}

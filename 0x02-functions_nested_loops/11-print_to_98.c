@@ -8,6 +8,8 @@ void print_to_98(int n)
 {
 	int max = 98;
 
+	if (n < max)
+	{
 	for (; n <= max ; n++)
 	{
 		printf("%d", n);
@@ -15,6 +17,16 @@ void print_to_98(int n)
 		{
 		_putchar(' ');
 		_putchar(',');
+		}
+	}
+	}
+	if (n >= max)
+	{
+		printf("%d", n);
+		if (n != max)
+		{
+			_putchar(' ');
+			_putchar(',');
 		}
 	}
 	_putchar('\n');

@@ -9,7 +9,6 @@ int _islower(int c){
 	if(islower(c))
 	{
 		_putchar(c);
-		_putchar('\n');
-		return (1);
+		return (islower(c));
 	}
 }

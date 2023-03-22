@@ -22,7 +22,7 @@ void print_to_98(int n)
 	}
 	else if (n >= max)
 	{
-		for (; n >= max ; n++)
+		for (; n >= max ; n--)
 		{
 		printf("%d", n);
 		if (n != max)

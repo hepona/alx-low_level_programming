@@ -4,9 +4,10 @@
 
 /**
  * _abs -> abosulute value of an integer
- * @int: type
+ * @c: integer
  * Return: 0
  */
+
 int _abs(int c)
 {
 	abs(c);

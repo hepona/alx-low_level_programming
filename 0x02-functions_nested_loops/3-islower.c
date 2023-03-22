@@ -4,11 +4,15 @@
 /**
  * _islower -> lowercase checker
  */
-int _islower(int c){
-	
-	if(islower(c))
+int _islower(int c)
+{
+	if (islower(c))
 	{
 		_putchar(c);
-		return (islower(c));
+		return (1);
+	}
+	else
+	{
+	return (0);
 	}
 }

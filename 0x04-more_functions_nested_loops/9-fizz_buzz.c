@@ -25,6 +25,7 @@ int main(void)
 		else if (i % 3 == 0)
 		{
 			printf("Fizz ");
+		}
 		else
 		{
 			printf("%d ", i);
@@ -33,5 +34,4 @@ int main(void)
 	printf("\n");
 
 	return (0);
-}
 }

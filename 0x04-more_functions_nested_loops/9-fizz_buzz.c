@@ -19,7 +19,14 @@ int main(void)
 		}
 		else if (i % 3 == 0)
 		{
+			if (i != 100)
+			{
 			printf("Fizz ");
+			}
+			else
+			{
+				printf("Fizz");
+			}
 		}
 		else
 		{

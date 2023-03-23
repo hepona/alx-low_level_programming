@@ -19,11 +19,11 @@ void times_table(void)
 			}
 			if (j < 10)
 			{
-				printf("  ");
+				_putchar(" ");
 			}
 			else
 			{
-				printf(" ");
+				_putchar("  ");
 			}
 		}
 			printf("\n");

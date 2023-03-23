@@ -12,19 +12,17 @@ void times_table(void)
 	{
 		for (j = 0 ; j < 10 ; j++)
 		{
-			printf("%d", i * j);
-			if (j != 9)
+			if (j*i < 10)
 			{
-				printf(",");
-			}
-			if (j < 10)
-			{
-				printf(" ");
+				printf(" %d", i*j);
 			}
 			else
 			{
-				printf(" ");
-				printf(" ");
+				printf("%d", i*j);
+			}
+			if(j != 9)
+			{
+				printf(",");
 			}
 		}
 			printf("\n");

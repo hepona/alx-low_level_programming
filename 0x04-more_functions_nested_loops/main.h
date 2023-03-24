@@ -3,6 +3,7 @@
 
 #include<stdio.h>
 
+void print_number(int n);
 void print_number(int num);
 int _putchar(char c);
 int _isupper(int c);

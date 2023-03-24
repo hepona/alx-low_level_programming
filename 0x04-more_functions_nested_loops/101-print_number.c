@@ -6,11 +6,11 @@
  */
 void print_number(int n)
 {
-	if (n >=0 && n <10)
+	if (n >= 0 && n < 10)
 	{
 		_putchar(n);
 	}
-	else 
+	else
 	{
 		if (n > 10)
 		{

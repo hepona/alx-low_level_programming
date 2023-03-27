@@ -8,8 +8,7 @@
 int main(void)
 {
     char *str;
-
-    str = "0123456789";
+    str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis vitae lectus ut mattis. Aliquam sed dolor in diam faucibus ornare quis sed dui. Vestibulum posuere sollicitudin magna, vel elementum libero consectetur quis. Nullam vitae dui nisi. Nunc eget quam imperdiet, suscipit massa scelerisque, blandit velit. Phasellus viverra dapibus odio lacinia feugiat." ;
     puts2(str);
     return (0);
 }

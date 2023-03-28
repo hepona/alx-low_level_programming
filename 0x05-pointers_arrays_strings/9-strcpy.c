@@ -10,11 +10,13 @@ char *_strcpy(char *dest, char *src)
 {
 	int i;
 	int l = strlen(src);
-	char tmp[0];
+	char tmp;
 
 	for (i = 0 ; i <= l ; i++)
 	{
 		dest[i] = src[i];
 	}
 	_putchar('\n');
+
+	return (dest);
 }

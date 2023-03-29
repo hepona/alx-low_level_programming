@@ -3,6 +3,7 @@
 #include <ctype.h>
 /**
  * string_toupper -> change lowercase to uppercase
+ * @s: a character
  * Return: s
  */
 char *string_toupper(char *s)

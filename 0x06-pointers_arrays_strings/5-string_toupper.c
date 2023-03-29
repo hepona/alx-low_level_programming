@@ -4,8 +4,10 @@
  * string_toupper -> change lowercase to uppercase
  * Return: s
  */
-char *string_toupper(char *s)
+char *string_toupper(char *)
 {
+	int i;
+
 	for (i = 0 ; i < strlen(s) ; i++)
 	{
 		if (islower(s[i]))

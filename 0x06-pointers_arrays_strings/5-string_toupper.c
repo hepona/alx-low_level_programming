@@ -2,7 +2,7 @@
 
 /**
  * string_toupper -> change lowercase to uppercase
- * @c: character
+ * @s: character
  * Return: s
  */
 char *string_toupper(char *s)

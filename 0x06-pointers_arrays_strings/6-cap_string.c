@@ -21,7 +21,7 @@ char *cap_string(char *s)
 			s[i] = ' ';
 		}
 
-		else if (isspace(s[i - 1]) || s[i - 1] == '.'
+		else if (isspace(s[i - 1]) || s[i - 1] == '.' || s[i - 1] == '\t'
 				|| s[i - 1] == ';' || s[i - 1] == ','
 				|| s[i - 1] == '\n' || s[i - 1] == '('
 				|| s[i - 1] == ')' || s[i - 1] == '{'

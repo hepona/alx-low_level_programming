@@ -10,7 +10,7 @@
 char *cap_string(char *s)
 {
 	int i;
-	int l = strlen(s);
+	int l = strlen(s) - 1;
 
 	for (i = 0 ; i < l ; i++)
 	{

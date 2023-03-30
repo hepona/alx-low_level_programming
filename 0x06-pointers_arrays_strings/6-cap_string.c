@@ -16,7 +16,7 @@ char *cap_string(char *s)
 	{
 	if (islower(s[i]))
 	{
-		if (ispunct(s[i - 1]) || isspace(s[i - 1]) || s[i - 1] == '\n' || s[i - 1] == '.')
+		if (s[i] != '\t' && ispunct(s[i - 1]) || isspace(s[i - 1]) || s[i - 1] == '\n' || s[i - 1] == '.')
 		{
 			s[i] = s[i] - 32;
 		}

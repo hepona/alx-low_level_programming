@@ -12,12 +12,16 @@ char *cap_string(char *s)
 	int i;
 	int l = strlen(s);
 
-	for (islower[i])
+	for (i = 0 ; i < l ; i++)
 	{
-		if (ispunct(s[i-1] || isspace(s[i-1]) || s[i-1] == '\n' || s[i-1] == '.'))
+	if (islower(s[i]))
+	{
+		if (ispunct(s[i - 1]) || isspace(s[i - 1]) || s[i - 1] == '\n' || s[i - 1] == '.')
 		{
-			s[i] = s[i] -32;
+			s[i] = s[i] - 32;
 		}
 	}
-	return s;
+	}
+
+	return (s);
 }

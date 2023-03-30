@@ -21,7 +21,7 @@ char *cap_string(char *s)
 			s[i] = ' ';
 		}
 
-		if (isspace(s[i - 1]) || s[i - 1] == '.')
+		else if (isspace(s[i - 1]) || s[i - 1] == '.')
 		{
 			s[i] = s[i] - 32;
 		}

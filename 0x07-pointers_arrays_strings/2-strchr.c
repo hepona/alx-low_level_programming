@@ -21,5 +21,5 @@ char *_strchr(char *s, char c)
 	}
 	_putchar('\n');
 
-	return (NULL);
+	return (0);
 }

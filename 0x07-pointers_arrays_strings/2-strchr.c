@@ -17,5 +17,7 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
+	_putchar('\n');
+
 	return (NULL);
 }

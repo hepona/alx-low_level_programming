@@ -1,6 +1,4 @@
 #include <stddef.h>
-#include "main.h"
-#include "_putchar.c"
 /**
  * _strchr -> locate a character in a string
  * @s: a character

@@ -3,6 +3,7 @@
 /**
  * factorial -> factorial of n
  * @n: integer
+ * Return: 1 if n=0/n=1, -1 if n<0, else the result
  */
 int factorial(int n)
 {

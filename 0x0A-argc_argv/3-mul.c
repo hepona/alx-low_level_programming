@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 
 	int b = atoi(argv[2]);
 
-	if (argc == 3 && isdigit(*argv[1]) && isdigit(*argv[2]))
+	if (argc == 3 && (isdigit(*argv[1]) || (*argv[1] == '-' && isdigit(*(argv[1]+1)))) &&
+            (isdigit(*argv[2]) || (*argv[2] == '-' && isdigit(*(argv[2]+1)))))
 	{
 		int r = a * b;
 

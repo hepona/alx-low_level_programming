@@ -3,9 +3,11 @@
 #include "_putchar.c"
 /**
  * main -> print my name
+ * @argc: integer
+ * @argv: charater
  * Return: 0
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 

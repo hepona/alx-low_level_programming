@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include "main.h"
 #include <stdlib.h>
 #include <ctype.h>
 /**
  * main -> print multiplication of 2 number
  * @argc: integer
  * @argv: character
- * Return:0 if number are correct -1 otherwise
+ * Return:0 if the numbers are valide, 1 otherwise
  */
 int main(int argc, char *argv[])
 {
@@ -14,20 +13,15 @@ int main(int argc, char *argv[])
 
 	int b = atoi(argv[2]);
 
-	if (argc == 3 && (isdigit(*argv[1]) ||
-				(*argv[1] == '-' && isdigit(*(argv[1] + 1)))) &&
-			(isdigit(*argv[2]) ||
-			 (*argv[2] == '-' && isdigit(*(argv[2] + 1)))))
-	{
-		int r = a * b;
+	int r;
 
-		printf("%d\n", r);
-	}
-	else
+	if (argc != 3 || (isdigit(a) && isdigit(b)))
 	{
 		printf("Error\n");
-		return (-1);
+		return (1);
 	}
-	return (0);
+	r = a * b;
 	
+	printf("%d\n", r);
+	return (0);
 }

@@ -23,10 +23,17 @@ int main(int argc, char *argv[])
 
 		printf("%d\n", r);
 	}
+	else if (argc == 3 && (argv[1] == NULL || argv[2] == NULL))
+	{
+		printf("Error\n");
+		return (-1);
+	}
+
 	else
 	{
 		printf("Error\n");
 		return (-1);
 	}
 	return (0);
+	
 }

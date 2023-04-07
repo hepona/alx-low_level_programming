@@ -1,5 +1,5 @@
 #include "main.h"
-#include "_putchar.c"
+#include <stdio.h>
 /**
  * main -> print my name
  * @argc: integer
@@ -12,15 +12,10 @@ int main(int argc, char *argv[])
 
 	for (i = 0 ; i < argc ; i++)
 	{
-		char *p = argv[i];
-
-		while (*p != '\0')
-		{
-			_putchar(*p);
-			p++;
-		}
+		printf("%s", argv[i]);
 	}
-	_putchar('\n');
+
+	printf("\n");
 
 	return (0);
 }

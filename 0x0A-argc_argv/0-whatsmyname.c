@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	for (i = 0 ; i < argc ; i++)
 	{
 		char *p = argv[i];
+
 		while (*p != '\0')
 		{
 			_putchar(*p);

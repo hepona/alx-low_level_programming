@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	int r;
 
-	if (argc != 3 && (isdigit(a) && isdigit(b)))
+	if (argc != 3 && (!isdigit(a) || !isdigit(b)))
 	{
 		printf("Error\n");
 		return (1);

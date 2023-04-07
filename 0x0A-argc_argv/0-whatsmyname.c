@@ -13,9 +13,14 @@ int main(int argc, char *argv[])
 
 	for (i = 0 ; i < argc ; i++)
 	{
-		_putchar(argv[i]);
+		char *p = argv[i];
+		while (*p != '\0')
+		{
+			_putchar(*p);
+			p++;
+		}
 	}
-
 	_putchar('\n');
+
 	return (0);
 }

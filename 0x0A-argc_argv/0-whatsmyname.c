@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include "_putchar.c"
 /**
  * main -> print my name

@@ -1,1 +1,7 @@
-char *_strchr(char *s, char c){}
+/**
+ * _strchr -> _strchr
+ * @s: char
+ * @c: char
+ * Return: 0
+ */
+char *_strchr(char *s, char c) {}

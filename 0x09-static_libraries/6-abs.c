@@ -1,1 +1,6 @@
-int _abs(int n){}
+/**
+ * _abs -> _abs
+ * @n: integer
+ * Return: 0
+ */
+int _abs(int n) {}

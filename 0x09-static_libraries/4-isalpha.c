@@ -1,1 +1,6 @@
-int _isalpha(int c){}
+/**
+ * _isalpha -> _isalpha
+ * @c: int
+ * Return: 0
+ */
+int _isalpha(int c) {}

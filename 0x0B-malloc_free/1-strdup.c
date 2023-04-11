@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <string.h>
 /**
  * _strdup -> pointer to a nw allocated space
  * @str: character
@@ -9,7 +10,7 @@ char *_strdup(char *str)
 {
 	int i;
 
-	char *p = malloc(sizeof(char));
+	char *p = malloc(sizeof(char) * strlen(str));
 
 	if (str == NULL)
 	{

@@ -4,7 +4,7 @@
 /**
  * error -> handling errors
  */
-void error()
+void error(void)
 {
 	_putchar('E');
 	_putchar('r');
@@ -16,18 +16,20 @@ void error()
 /**
  * main ->  multiplies two positive numbers
  * Return: 0
+ * @argc: integer
+ * @argv: character
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, mul, i;
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	 if (argc < 3)
-	 {
-		 error();
-		 return (98);
-	 }
+	if (argc < 3)
+	{
+		error();
+		return (98);
+	}
+	 num1 = atoi(argv[1]);
+	 num2 = atoi(argv[2]);
 	for (i = 0 ; argv[1][i] != '\0' ; i++)
 	{
 		if (!isdigit(argv[1][i]))

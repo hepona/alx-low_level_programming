@@ -1,6 +1,7 @@
 #include "main.h"
 #include <ctype.h>
 #include <stdio.h>
+#include <limits.h>
 /**
  * error -> handling errors
  */
@@ -46,6 +47,8 @@ int main(int argc, char *argv[])
 			return (98);
 		}
 	}
+	if (num1 > INT_MAX / num2)
+		return (0);
 	mul = num1 * num2;
 	printf("%ld\n", mul);
 	return (mul);

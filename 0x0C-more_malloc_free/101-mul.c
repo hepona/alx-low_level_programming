@@ -1,5 +1,6 @@
 #include "main.h"
 #include <ctype.h>
+#include <stdio.h>
 /**
  * error -> handling errors
  */
@@ -22,6 +23,11 @@ int main (int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
+	 if (argc < 3)
+	 {
+		 error();
+		 return (98);
+	 }
 	for (i = 0 ; argv[1][i] != '\0' ; i++)
 	{
 		if (!isdigit(argv[1][i]))
@@ -32,17 +38,11 @@ int main (int argc, char *argv[])
 	}
 	for (i = 0 ; argv[2][i] != '\0' ; i++)
 	{
-		if (!isdigit(argv[1][i]))
+		if (!isdigit(argv[2][i]))
 		{
 			error();
 			return (98);
 		}
-	}
-
-	if (argc != 3)
-	{
-		error();
-		return (98);
 	}
 	mul = num1 * num2;
 	printf("%d\n", mul);

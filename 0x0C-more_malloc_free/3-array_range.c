@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
  * array_range -> create array of integers
  * @min: integer
@@ -19,7 +18,7 @@ int *array_range(int min, int max)
 	if (m == NULL)
 		return (NULL);
 	m[0] = min;
-	for (i = 1 ; i < l ; i++)
+	for (i = 1 ; i <= l ; i++)
 	{
 		m[i] = i + min;
 	}

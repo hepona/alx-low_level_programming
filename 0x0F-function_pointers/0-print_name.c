@@ -1,4 +1,5 @@
 #include "function_pointer.h"
+#include <string.h>
 /**
  * print_name -> print a name
  * @name: a name
@@ -6,6 +7,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL)
+	int l = strlen(name);
+	if (name[l] == '\0')
 	f(name);
 }

@@ -8,6 +8,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	int l = strlen(name);
-	if (name[l] == '\0')
+
+	if (name[l + 1] == '\0')
 	f(name);
 }

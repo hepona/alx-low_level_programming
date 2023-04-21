@@ -44,13 +44,14 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	int r = a / b;
+	int r = 0;
 
 	if (b == 0)
 	{
 		printf("Error\n");
 		return (100);
 	}
+	r = a / b;
 	return (r);
 }
 /**
@@ -61,12 +62,13 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	int r = a % b;
+	int r = 0;
 
 	if (b == 0)
 	{
 		printf("Error\n");
 		return (100);
 	}
+	r = a % b;
 	return (r);
 }

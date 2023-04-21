@@ -1,5 +1,9 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include "print_char.c"
+#include "print_float.c"
+#include "print_int.c"
+#include "print_string.c"
 /**
  * print_all -> print anything
  * @format: list of types of arguments passed to the function
@@ -8,10 +12,6 @@ void print_all(const char * const format, ...)
 {
 	va_list(args);
 	int count = 0;
-	char chara;
-	int ent;
-	float f;
-	char *string;
 	char *separator = ", ";
 
 	va_start(args, format);
@@ -20,22 +20,16 @@ void print_all(const char * const format, ...)
 		switch (format[count])
 		{
 			case 'c':
-				chara = va_arg(args, int);
-				printf("%c", chara);
+				print_char(args);
 				break;
 			case 's':
-				string = va_arg(args, char *);
-				if (string == NULL)
-					string = "(nil)";
-				printf("%s", string);
+				print_string(args);
 				break;
 			case 'i':
-				ent = va_arg(args, int);
-				printf("%d", ent);
+				print_int(args);
 				break;
 			case 'f':
-				f = va_arg(args, double);
-				printf("%f", f);
+				print_float(args);
 				break;
 			default:
 				printf(" ");

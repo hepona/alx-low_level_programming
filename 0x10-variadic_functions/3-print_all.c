@@ -32,7 +32,6 @@ void print_all(const char * const format, ...)
 				print_float(args);
 				break;
 			default:
-				printf(" ");
 				break;
 		}
 		count++;

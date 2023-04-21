@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	a = atoi(argv[1]);
 	s = argv[2];
@@ -26,12 +26,12 @@ int main(int argc, char *argv[])
 				*s != '/' || *s != '*'))
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
 	if (a < 0 || b < 0)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	r = op_func(a, b);
 	printf("%d\n", r);

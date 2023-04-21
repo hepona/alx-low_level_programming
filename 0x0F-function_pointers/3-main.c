@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	b = atoi(argv[3]);
 	op_func = get_op_func(s);
-	if (op_func == NULL && (*s != '+' || *s != '-' ||
-				*s != '/' || *s != '*'))
+	if (op_func == NULL || (*s != '+' && *s != '-' &&
+				*s != '/' && *s != '*'))
 	{
 		printf("Error\n");
 		return (99);

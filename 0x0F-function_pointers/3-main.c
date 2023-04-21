@@ -26,12 +26,14 @@ int main(int argc, char *argv[])
 				*s != '/' || *s != '*'))
 	{
 		printf("Error\n");
-		return (99);
+		printf("99\n");
+		return (0);
 	}
 	if (a < 0 || b < 0)
 	{
 		printf("Error\n");
-		return (98);
+		printf("98\n");
+		return (0);
 	}
 	r = op_func(a, b);
 	printf("%d\n", r);

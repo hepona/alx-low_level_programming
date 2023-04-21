@@ -26,8 +26,7 @@ int main(int argc, char *argv[])
 				*s != '/' || *s != '*'))
 	{
 		printf("Error\n");
-		printf("99\n");
-		return (0);
+		return (99);
 	}
 	r = op_func(a, b);
 	printf("%d\n", r);

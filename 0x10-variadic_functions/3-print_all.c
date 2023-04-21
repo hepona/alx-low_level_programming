@@ -34,7 +34,8 @@ void print_all(const char * const format, ...)
 				print_float(args);
 				break;
 			default:
-				break;
+				count++;
+				continue;
 		}
 		count++;
 		if (format[count] != '\0' && (format[count] == 'c'

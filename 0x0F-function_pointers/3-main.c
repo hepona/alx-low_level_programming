@@ -8,10 +8,10 @@
  */
 int main(int argc, char *argv[])
 {
-	char *s;
 	int (*get_op_func(char *s))(int, int);
 	int (*op_func)(int, int);
 	int a, b, r;
+	char *s;
 
 	if (argc != 4)
 	{

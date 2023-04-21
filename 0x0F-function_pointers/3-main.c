@@ -8,15 +8,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b;
-
-	char *s;
-
-	int (*op_func)(int, int);
-
 	int (*get_op_func(char *s))(int, int);
-
-	int r;
+	int (*op_func)(int, int);
+	int a, b, r;
+	char *s;
 
 	if (argc != 4)
 	{
@@ -27,7 +22,8 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	b = atoi(argv[3]);
 	op_func = get_op_func(s);
-	if (op_func == NULL)
+	if (op_func == NULL && (*s != '+' || *s != '-' ||
+				*s != '/' || *s != '*'))
 	{
 		printf("Error\n");
 		exit(99);

@@ -19,6 +19,10 @@ void print_all(const char * const format, ...)
 		return;
 	while (format[count] != '\0')
 	{
+		if (format[count] == 'c' || format[count]  == 's'
+				|| format[count]  == 'i' ||
+				format[count]  == 'f')
+			printf("%s", separator);
 		switch (format[count])
 		{
 			case 'c':
@@ -38,11 +42,6 @@ void print_all(const char * const format, ...)
 				continue;
 		}
 		count++;
-		if (format[count] != '\0' && (format[count] == 'c'
-			|| format[count]  == 's' ||
-			format[count]  == 'i' ||
-			format[count]  == 'f'))
-			printf("%s", separator);
 	}
 	printf("\n");
 }

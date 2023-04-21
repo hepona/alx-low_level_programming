@@ -19,9 +19,9 @@ void print_all(const char * const format, ...)
 		return;
 	while (format[count] != '\0')
 	{
-		if (format[count] == 'c' || format[count]  == 's'
-				|| format[count]  == 'i' ||
-				format[count]  == 'f')
+		if (format[count - 1] == 'c' || format[count - 1]  == 's'
+				|| format[count - 1]  == 'i' ||
+				format[count - 1]  == 'f')
 			printf("%s", separator);
 		switch (format[count])
 		{

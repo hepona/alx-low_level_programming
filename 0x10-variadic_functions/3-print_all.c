@@ -16,7 +16,10 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	if (format == NULL)
+	{
+		printf("\n");
 		return;
+	}
 	while (format[count] != '\0')
 	{
 		if (count > 0 && (format[count - 1] == 'c' || format[count - 1]  == 's'

@@ -9,7 +9,7 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i;
-	size_t l = listint_len(head);
+	unsigned int l = listint_len(head);
 
 	if (head == NULL)
 		return (NULL);
@@ -18,6 +18,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		head = head->next;
 	}
 	if (index > l)
-	       return (NULL);	
+		return (NULL);
 	return (head);
 }

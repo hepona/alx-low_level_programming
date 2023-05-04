@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int i;
 	int r = 0;
-	int l = strlen(b);
+	int l = strlen(b) - 1;
 
 	if (b == NULL)
 		return (0);
@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '1' && b[i] != '0')
 			return (0);
 		if (b[i] == '1')
-			r = r + _pow_recursion(2, l - i - 1);
+			r = r + (1 << (l - i));
 	}
 	return (r);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 #include <string.h>
-#include "pow.c"
+
 /**
  * binary_to_uint -> convert binary to an unsigned int
  * @b: pointing to "0" and "1"

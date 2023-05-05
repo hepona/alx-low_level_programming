@@ -11,6 +11,8 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 		_putchar('0');
+	else
+	{
 	while (n > 0)
 	{
 		if ((n & 1) != 0)
@@ -25,5 +27,6 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 		else
 			_putchar('0');
+	}
 	}
 }

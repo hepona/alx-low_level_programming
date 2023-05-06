@@ -10,11 +10,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int i, c = 0;
 
-	if (n & m)
+	if ((n ^ m) == 0)
 		return (0);
-	for (i = 1 ; n & m ; i++)
+	for (i = 0 ; n & m ; i++)
 	{
-		n = n << i;
+		n = n << 1;
 		c++;
 	}
 	return (c);

@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
  * read_textfile -> read text file and print it
  * @filename: name of the file

@@ -8,7 +8,8 @@
  */
 int main(int args, char *argv[])
 {
-	char tmp;
+	int i;
+	char tmp[buff_s];
 	FILE *ffrom = fopen(argv[1], "r");
 	FILE *fto = fopen(argv[2], "w");
 
@@ -29,9 +30,9 @@ int main(int args, char *argv[])
 	}
 	if (argv[2] != NULL)
 	{
-		while ((tmp = fgetc(ffrom)) != EOF)
+		for (i = 0 ; (tmp[i] = fgetc(ffrom)) != EOF ; i++)
 		{
-			fputc(tmp, fto);
+			fputc(tmp[i], fto);
 		}
 	}
 	if (fclose(ffrom) != 0)

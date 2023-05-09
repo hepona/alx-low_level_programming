@@ -27,9 +27,12 @@ int main(int args, char *argv[])
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((tmp = fgetc(ffrom)) != EOF)
+	if (argv[2] != NULL)
 	{
-		fputc(tmp, fto);
+		while ((tmp = fgetc(ffrom)) != EOF)
+		{
+			fputc(tmp, fto);
+		}
 	}
 	if (fclose(ffrom) != 0)
 	{

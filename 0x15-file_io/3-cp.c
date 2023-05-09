@@ -7,13 +7,10 @@
  */
 int main(int args, char *argv[])
 {
-	int fdf, fdt;
 	char tmp;
 	FILE *ffrom = fopen(argv[1], "r");
 	FILE *fto = fopen(argv[2], "w");
-
-	fdf = fileno(ffrom);
-	fdt = fileno(fto);
+	int fdf = fileno(ffrom), fdt = fileno(fto);
 
 	if (args != 3)
 	{

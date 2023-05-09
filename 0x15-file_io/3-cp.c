@@ -6,7 +6,7 @@
  * @argv: argument
  * Return: 0
  */
-int main(int args, char *argv[])
+void main(int args, char *argv[])
 {
 	char tmp;
 	FILE *ffrom = fopen(argv[1], "r");
@@ -16,19 +16,19 @@ int main(int args, char *argv[])
 	if (args != 3)
 	{
 		dprintf(fdf, "Usage: cp %s %s\n", argv[1], argv[2]);
-		return (97);
+		exit(97);
 	}
 	if (ffrom == NULL)
 	{
 		dprintf(fdf, "Error: Can't read from file %s\n", argv[1]);
-		return (98);
+		exit(98);
 	}
 	while ((tmp = fgetc(ffrom)) != EOF)
 	{
 		if (tmp == EOF)
 		{
 			dprintf(fdf, "Error: Can't write to %s\n", argv[2]);
-			return (99);
+			exit(99);
 		}
 
 		fputc(tmp, fto);
@@ -36,14 +36,13 @@ int main(int args, char *argv[])
 	if (fclose(ffrom) != 0)
 	{
 		dprintf(fdf, "Error: Can't close fd %d\n", fdf);
-		return (100);
+		exit(100);
 	}
 	fclose(ffrom);
 	if (fclose(fto) != 0)
 	{
 		dprintf(fdt, "Error: Can't close fd %d\n", fdt);
-		return (100);
+		exit(100);
 	}
 	fclose(fto);
-	return (0);
 }

@@ -29,7 +29,7 @@ int main(int args, char *argv[])
 	}
 	if (argv[2] != NULL)
 	{
-		while ((tmp[i] = fgetc(ffrom)) != EOF)
+		while ((tmp = fgetc(ffrom)) != EOF)
 		{
 			fputc(tmp, fto);
 		}

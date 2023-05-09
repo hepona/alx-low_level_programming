@@ -18,10 +18,13 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (f == NULL)
 		return (-1);
-	while (text_content[i] != '\0')
+	if (text_content != NULL)
 	{
-		fputc(text_content[i], f);
-		i++;
+		while (text_content[i] != '\0')
+		{
+			fputc(text_content[i], f);
+			i++;
+		}
 	}
 	fclose(f);
 	return (1);

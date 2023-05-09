@@ -15,19 +15,19 @@ int main(int args, char *argv[])
 
 	if (args != 3)
 	{
-		dprintf(fdf, "Usage: cp %s %s\n", argv[1], argv[2]);
+		dprintf(2, "Usage: cp %s %s\n", argv[1], argv[2]);
 		exit(97);
 	}
 	if (ffrom == NULL)
 	{
-		dprintf(fdf, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	while ((tmp = fgetc(ffrom)) != EOF)
 	{
 		if (tmp == EOF)
 		{
-			dprintf(fdf, "Error: Can't write to %s\n", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 
@@ -35,13 +35,13 @@ int main(int args, char *argv[])
 	}
 	if (fclose(ffrom) != 0)
 	{
-		dprintf(fdf, "Error: Can't close fd %d\n", fdf);
+		dprintf(2, "Error: Can't close fd %d\n", fdf);
 		exit(100);
 	}
 	fclose(ffrom);
 	if (fclose(fto) != 0)
 	{
-		dprintf(fdt, "Error: Can't close fd %d\n", fdt);
+		dprintf(2, "Error: Can't close fd %d\n", fdt);
 		exit(100);
 	}
 	fclose(fto);

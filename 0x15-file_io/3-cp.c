@@ -6,7 +6,7 @@
  * @argv: argument
  * Return: 0
  */
-void main(int args, char *argv[])
+int main(int args, char *argv[])
 {
 	char tmp;
 	FILE *ffrom = fopen(argv[1], "r");
@@ -45,4 +45,5 @@ void main(int args, char *argv[])
 		exit(100);
 	}
 	fclose(fto);
+	return (0);
 }

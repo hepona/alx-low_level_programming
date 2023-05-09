@@ -4,6 +4,7 @@
  * main - copy the content of a file
  * @args: num of argument
  * @argv: argument
+ * Return: 0
  */
 int main(int args, char *argv[])
 {

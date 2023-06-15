@@ -4,6 +4,7 @@
  * add_dnodeint_end -> add at the end of list
  * @head: list
  * @n: element to add
+ * Return: adress of new element or NULL
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -12,7 +13,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *tmp;
 
 	if (new == NULL)
-		return NULL;
+		return (NULL);
 	new->n = n;
 	if (*head == NULL)
 	{

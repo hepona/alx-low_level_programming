@@ -9,24 +9,24 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *nw = malloc(sizeof(hash_node_t));
 	int index = key_index((const unsigned char *)key, ht->size);
-	char *valuecp = "";
-	char *keycp = "";
-
+	hash_node_t *nw = malloc(sizeof(hash_node_t));
+	hash_node_t *tmp = ht->array[index];
+	char *keycp, *valuecp;
+	
 	if (nw == NULL || key == NULL)
 		return (0);
-	while(ht->array[index] != NULL)
+	valuecp = strdup(value);
+	while(tmp != NULL)
 	{
-		if(strcmp(ht->array[index]->key, key) == 0)
+		if(strcmp(tmp->key, key) == 0)
 		{
-			ht->array[index]->value = valuecp;
+			tmp->value = valuecp;
 			return (1);
 		}
-		ht->array[index] = ht->array[index]->next;
+		tmp = tmp->next;
 	}
-	strcpy(valuecp, value);
-	strcpy(keycp, key);
+	keycp = strdup(key);
 	nw->value = valuecp;
 	nw->key = keycp;
 	nw->next = ht->array[index];

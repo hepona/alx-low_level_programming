@@ -13,13 +13,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *nw = malloc(sizeof(hash_node_t));
 	hash_node_t *tmp = ht->array[index];
 	char *keycp, *valuecp;
-	
+
 	if (nw == NULL || key == NULL)
 		return (0);
 	valuecp = strdup(value);
-	while(tmp != NULL)
+	while (tmp != NULL)
 	{
-		if(strcmp(tmp->key, key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
 			tmp->value = valuecp;
 			return (1);

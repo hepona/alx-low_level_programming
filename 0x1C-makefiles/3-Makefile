@@ -10,11 +10,11 @@ ${NAME}: ${OBJ}
 	${CC} -c -o $@ $<
 .PHONY: clean oclean fclean
 clean:
-	${RM} *~ school
+	${RM} *~ ${NAME}
 oclean:
 	${RM} ${OBJ}
 fclean:
-	clean oclean
+	${RM} *~ ${NAME} ${OBJ}
 re:
 	 fclean all
 	

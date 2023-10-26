@@ -5,19 +5,19 @@ function that returns the perimeter of the island described in grid:
 
 
 def island_perimeter(grid):
-    """ return perimeter of grid"""
+    """return perimeter of grid"""
     p = 0
     r = len(grid)
     c = len(grid[0])
     for i in range(r):
         for j in range(c):
-            if grid[i][j] == 1 :
+            if grid[i][j] == 1:
                 if j == 0 or grid[i][j - 1] == 0:
-                    p+=1
-                if j == c-1 or grid[i][j + 1] == 0 :
-                    p+=1
-                if grid[i - 1][j] == 0 or i == 0 :
-                    p+=1
+                    p += 1
+                if j == c - 1 or grid[i][j + 1] == 0:
+                    p += 1
+                if grid[i - 1][j] == 0 or i == 0:
+                    p += 1
                 if grid[i + 1][j] == 0 or i == r - 1:
-                    p+=1
+                    p += 1
     return p

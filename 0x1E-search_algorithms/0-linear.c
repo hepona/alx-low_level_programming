@@ -1,4 +1,5 @@
 #include <search.h>
+#include <stdio.h>
 /**
  * linear_search - function that searches for a value in an array of integers
  * @array: pointer to the first element of the array to search in

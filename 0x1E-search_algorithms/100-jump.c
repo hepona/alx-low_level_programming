@@ -17,17 +17,18 @@ int jump = (int)sqrt(size);
 
 if (array == NULL)
 return (-1);
-for (i = 0; i < size; i += jump)
+for (i = 0; i < size && array[i] < value; i += jump)
 {
 printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-if (value >= array[i] && value <= array[i + jump])
+}
+
+printf("Value found between indexes [%ld] and [%ld]\n", i - jump, i);
+
+for (j = i - jump; j <= i && j < size; j++)
 {
-printf("Value found between indexes [%ld] and [%ld]\n", i, i + jump);
-for (j = i; j < (size_t)value; j++)
 printf("Value checked array[%ld] = [%d]\n", j, array[j]);
 if (array[j] == value)
 return (j);
-}
 }
 return (-1);
 }
